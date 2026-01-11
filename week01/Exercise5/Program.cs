@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the Exercise5 Project. - Program.cs:7");
+        Console.WriteLine("Hello World! This is the Exercise5 Project. ");
         
         DisplayWelcome();
         string userName = PromptUserName();
@@ -15,18 +15,18 @@ class Program
 
     static void DisplayWelcome()
     {
-        Console.WriteLine("Welcome to the program! - Program.cs:18");
+        Console.WriteLine("Welcome to the program! ");
     }
 
     static string PromptUserName()
     {
-        Console.Write("Please enter your name: - Program.cs:23");
+        Console.Write("Please enter your name: ");
         return Console.ReadLine();
     }
 
     static int PromptUserNumber()
     {
-        Console.Write("Please enter your favorite number: - Program.cs:29");
+        Console.Write("Please enter your favorite number: ");
         return Convert.ToInt32(Console.ReadLine());
     }
 
@@ -37,6 +37,6 @@ class Program
 
     static void DisplayResult(string name, int squaredNumber)
     {
-        Console.WriteLine($"Brother {name}, the square of your number is {squaredNumber} - Program.cs:40");
+        Console.WriteLine($"Brother {name}, the square of your number is {squaredNumber} ");
     }
 }

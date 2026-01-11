@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the Exercise3 Project. - Program.cs:7");
+        Console.WriteLine("Hello World! This is the Exercise3 Project. ");
 
         Random randomGenerator = new Random();
         bool playAgain = true;
@@ -19,35 +19,35 @@ class Program
 
             do
             {
-                Console.Write("What is your guess? - Program.cs:22");
+                Console.Write("What is your guess? ");
                 if (int.TryParse(Console.ReadLine(), out guess))
                 {
                     guessCount++;
 
                     if (magicNumber > guess)
                     {
-                        Console.WriteLine("Higher! - Program.cs:29");
+                        Console.WriteLine("Higher! ");
                     }
                     else if (magicNumber < guess)
                     {
-                        Console.WriteLine("Lower! - Program.cs:33");
+                        Console.WriteLine("Lower! ");
                     }
                     else
                     {
-                        Console.WriteLine($"You guessed it in {guessCount} attempts! - Program.cs:37");
+                        Console.WriteLine($"You guessed it in {guessCount} attempts! ");
                     }
                 }
                 else
                 {
-                    Console.WriteLine("Invalid input. Try again! - Program.cs:42");
+                    Console.WriteLine("Invalid input. Try again! ");
                 }
             } while (guess != magicNumber);
 
-            Console.Write("Do you want to play again? (yes/no) - Program.cs:46");
+            Console.Write("Do you want to play again? (yes/no) ");
             string response = Console.ReadLine().ToLower().Trim();
             playAgain = response == "yes";
         }
 
-        Console.WriteLine("Thanks for playing! - Program.cs:51");
+        Console.WriteLine("Thanks for playing! ");
     }
 }

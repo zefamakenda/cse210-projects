@@ -6,7 +6,7 @@ class Program
     {
         Console.WriteLine("Hello World! This is the Exercise1 Project. - Program.cs:7");
 
-        Console.Write("What is your first name? - Program.cs:9");
+        Console.Write("What is your first name?  9 - Program.cs:9");
         string firstName = Console.ReadLine();
 
         Console.Write("What is your last name? - Program.cs:12");

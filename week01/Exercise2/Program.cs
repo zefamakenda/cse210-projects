@@ -5,9 +5,9 @@ class Program
     static void Main(string[] args)
     {
 <<<<<<< HEAD
-        Console.WriteLine("Hello World! This is the Exercise2 Project. - Program.cs:7");
+        Console.WriteLine("Hello World! This is the Exercise2 Project. ");
 
-        Console.Write("What is your grade percentage? - Program.cs:9");
+        Console.Write("What is your grade percentage? ");
 =======
         Console.Write("What is your grade percentage? ");
 >>>>>>> 949e6911df252a66f050540cca5d730d51a472f2
@@ -50,14 +50,14 @@ class Program
         }
 
 <<<<<<< HEAD
-        Console.WriteLine($"Your letter grade is: {letter}{sign} - Program.cs:48");
+        Console.WriteLine($"Your letter grade is: {letter}{sign} ");
         if (percent >= 70)
         {
-            Console.WriteLine("Congratulations, you passed the course! - Program.cs:51");
+            Console.WriteLine("Congratulations, you passed the course! ");
         }
         else
         {
-            Console.WriteLine("Sorry, you didn't pass. Better luck next time! - Program.cs:55");
+            Console.WriteLine("Sorry, you didn't pass. Better luck next time! ");
 =======
         Console.WriteLine($"Your letter grade is: {letter}{sign} ");
         if (percent >= 70)

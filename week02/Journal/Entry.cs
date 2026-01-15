@@ -18,7 +18,7 @@ public class Entry
 
     public void Display()
     {
-        Console.WriteLine($"{Date}  {Prompt}  Program.cs:28 - Entry.cs:21");
+        Console.WriteLine($"{Date}  {Prompt} ");
         Console.WriteLine(Response);
         Console.WriteLine();
     }

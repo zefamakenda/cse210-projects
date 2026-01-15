@@ -14,8 +14,8 @@ public class Resume
 
     public void Display()
     {
-        Console.WriteLine($"Name: {_name} - resume.cs:17");
-        Console.WriteLine("Jobs: - resume.cs:18");
+        Console.WriteLine($"Name: {_name} ");
+        Console.WriteLine("Jobs: ");
         foreach (var job in _jobs)
         {
             job.Display();

@@ -1,26 +1,17 @@
 using System;
 
-
-public class Entry
+class Program
 {
-    public string Prompt { get; set; }
-    public string Response { get; set; }
-    public string Date { get; set; }
-
-
-    public Entry(string prompt, string response, string date)
+    static void Main(string[] args)
     {
-        Prompt = prompt;
-        Response = response;
-        Date = date;
+        Console.WriteLine("Hello World! This is the Exercise1 Project. - Entry.cs:7");
+
+        Console.Write("What is your first name? - Entry.cs:9");
+        string firstName = Console.ReadLine();
+
+        Console.Write("What is your last name? - Entry.cs:12");
+        string lastName = Console.ReadLine();
+
+        Console.WriteLine($"Your name is {lastName}, {firstName} {lastName}. - Entry.cs:15");
     }
-
-
-    public void Display()
-    {
-        Console.WriteLine($"{Date}  {Prompt}  Program.cs:28 - Entry.cs:21");
-        Console.WriteLine(Response);
-        Console.WriteLine();
-    }
-
 }

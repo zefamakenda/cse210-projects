@@ -4,15 +4,12 @@ class Program
 {
     static void Main(string[] args)
     {
-<<<<<<< HEAD
-        Console.WriteLine("Hello World! This is the Exercise2 Project. ");
+        Console.WriteLine("Hello World! This is the Exercise2 Project. - Program.cs:7");
 
-        Console.Write("What is your grade percentage? ");
-=======
-        Console.Write("What is your grade percentage? ");
->>>>>>> 949e6911df252a66f050540cca5d730d51a472f2
+        Console.Write("What is your grade percentage? - Program.cs:9");
         string answer = Console.ReadLine();
         int percent = int.Parse(answer);
+
         string letter = "";
         string sign = "";
 
@@ -49,25 +46,15 @@ class Program
             }
         }
 
-<<<<<<< HEAD
-        Console.WriteLine($"Your letter grade is: {letter}{sign} ");
+        Console.WriteLine($"Your letter grade is: {letter}{sign} - Program.cs:49");
+
         if (percent >= 70)
         {
-            Console.WriteLine("Congratulations, you passed the course! ");
+            Console.WriteLine("Congratulations, you passed the course! - Program.cs:53");
         }
         else
         {
-            Console.WriteLine("Sorry, you didn't pass. Better luck next time! ");
-=======
-        Console.WriteLine($"Your letter grade is: {letter}{sign} ");
-        if (percent >= 70)
-        {
-            Console.WriteLine("Congratulations, you passed the course! ");
-        }
-        else
-        {
-            Console.WriteLine("Sorry, you didn't pass. Better luck next time! ");
->>>>>>> 949e6911df252a66f050540cca5d730d51a472f2
+            Console.WriteLine("Sorry, you didn't pass. Better luck next time! - Program.cs:57");
         }
     }
 }

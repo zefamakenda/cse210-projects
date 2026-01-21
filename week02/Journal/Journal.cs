@@ -4,95 +4,81 @@ using System.IO;
 
 public class Journal
 {
-    private List<Entry> entries;
-    private string[] prompts;
-
-    public Journal()
+    private List<Entry> entries = new List<Entry>();
+    private List<string> prompts = new List<string>
     {
-        entries = new List<Entry>();
-        prompts = new string[]
-        {
-            "Who did I meet or talk to today that stood out the most?",
-            "What moment today brought me the most joy or satisfaction?",
-            "In what ways did I notice the Lord’s influence in my life today?",
-            "What emotion affected me the most throughout the day?",
-            "If I could relive one moment from today, what would I change?",
-            "What new knowledge or insight did I gain today?",
-        }; 
-
-    }
-
+        "Who was the most interesting person I interacted with today?",
+        "What was the best part of my day?",
+        "How did I see the hand of the Lord in my life today?",
+        "What was the strongest emotion I felt today?",
+        "If I had one thing I could do over today, what would it be?"
+    };
+    private Random random = new Random();
 
     public void AddEntry()
     {
-        string prompt = GetRandomPrompt();
-        string response = GetResponse(prompt);
-        string date = GetCurrentDate();
-        Entry entry = CreateEntry(prompt, response, date);
-        entries.Add(entry);
+        string prompt = prompts[random.Next(prompts.Count)];
+        Console.WriteLine($"Prompt: {prompt} - Journal.cs:21");
+        Console.Write("Your response: - Journal.cs:22");
+        string response = Console.ReadLine();
+
+        entries.Add(new Entry
+        {
+            Prompt = prompt,
+            Response = response,
+            Date = DateTime.Now.ToShortDateString()
+        });
+
+        Console.WriteLine("Entry added!\n - Journal.cs:32");
     }
-
-
-    private string GetRandomPrompt()
-    {
-        Random rand = new Random();
-        return prompts[rand.Next(0, prompts.Length)];
-    }
-
-
-    private string GetResponse(string prompt)
-    {
-        Console.WriteLine(prompt);
-        return Console.ReadLine();
-    }
-
-
-    private string GetCurrentDate()
-    {
-        return DateTime.Now.ToShortDateString();
-    }
-
-
-    private Entry CreateEntry(string prompt, string response, string date)
-    {
-        return new Entry(prompt, response, date);
-    }
-
 
     public void DisplayEntries()
     {
+        if (entries.Count == 0)
+        {
+            Console.WriteLine("No entries found.\n - Journal.cs:39");
+            return;
+        }
+
         foreach (var entry in entries)
         {
             entry.Display();
         }
     }
 
-
     public void SaveToFile(string filename)
     {
-        using (StreamWriter writer = new StreamWriter(filename))
+        using StreamWriter writer = new StreamWriter(filename);
+        foreach (var entry in entries)
         {
-            foreach (var entry in entries)
-            {
-                writer.WriteLine($"{entry.Date}|{entry.Prompt}|{entry.Response}");
-            }
+            writer.WriteLine($"{entry.Date}|{entry.Prompt}|{entry.Response}");
         }
+        Console.WriteLine("Journal saved.\n - Journal.cs:56");
     }
-
 
     public void LoadFromFile(string filename)
     {
+        if (!File.Exists(filename))
+        {
+            Console.WriteLine("File not found.\n - Journal.cs:63");
+            return;
+        }
+
         entries.Clear();
-        string[] lines = File.ReadAllLines(filename);
-        foreach (string line in lines)
+        foreach (var line in File.ReadAllLines(filename))
         {
             string[] parts = line.Split('|');
             if (parts.Length == 3)
             {
-                Entry entry = CreateEntry(parts[1], parts[2], parts[0]);
-                entries.Add(entry);
+                entries.Add(new Entry
+                {
+                    Date = parts[0],
+                    Prompt = parts[1],
+                    Response = parts[2]
+                });
             }
         }
-    }
 
+        Console.WriteLine("Journal loaded.\n - Journal.cs:82");
+    }
 }

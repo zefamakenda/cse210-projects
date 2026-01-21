@@ -4,9 +4,15 @@ class Program
 {
     static void Main(string[] args)
     {
+<<<<<<< HEAD
         Console.WriteLine("Hello World! This is the Exercise2 Project. - Program.cs:7");
 
         Console.Write("What is your grade percentage? - Program.cs:9");
+=======
+        Console.WriteLine("Hello World! This is the Exercise2 Project.");
+
+        Console.Write("What is your grade percentage? ");
+>>>>>>> f9687c77b9129d0a7e4651f0e5c5cc2d80bf184c
         string answer = Console.ReadLine();
         int percent = int.Parse(answer);
 
@@ -46,6 +52,7 @@ class Program
             }
         }
 
+<<<<<<< HEAD
         Console.WriteLine($"Your letter grade is: {letter}{sign} - Program.cs:49");
 
         if (percent >= 70)
@@ -55,6 +62,17 @@ class Program
         else
         {
             Console.WriteLine("Sorry, you didn't pass. Better luck next time! - Program.cs:57");
+=======
+        Console.WriteLine($"Your letter grade is: {letter}{sign}");
+
+        if (percent >= 70)
+        {
+            Console.WriteLine("Congratulations, you passed the course!");
+        }
+        else
+        {
+            Console.WriteLine("Sorry, you didn't pass. Better luck next time!");
+>>>>>>> f9687c77b9129d0a7e4651f0e5c5cc2d80bf184c
         }
     }
 }

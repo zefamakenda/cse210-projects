@@ -8,7 +8,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the ScriptureMemorizer Project. - Program.cs:11");
+        Console.WriteLine("Hello World! This is the ScriptureMemorizer Project.");
 
         Reference reference = new Reference("Alma", 36, 3);
         Scripture scripture = new Scripture(
@@ -25,7 +25,7 @@ class Program
             Console.WriteLine(scripture.GetDisplayText());
             
 
-            Console.Write("\nPress Enter to continue or type 'quit' to exit: - Program.cs:28");
+            Console.Write("\nPress Enter to continue or type 'quit' to exit: ");
             string input = Console.ReadLine();
 
 

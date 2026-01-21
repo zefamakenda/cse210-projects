@@ -7,19 +7,19 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the Journal Project. - Program.cs:10");
+        Console.WriteLine("Hello World! This is the Journal Project. ");
 
         Journal journal = new Journal();
 
         while (true)
         {
-            Console.WriteLine("Journal Program - Program.cs:16");
-            Console.WriteLine("1. Write a new entry - Program.cs:17");
-            Console.WriteLine("2. Display journal - Program.cs:18");
-            Console.WriteLine("3. Save journal to file - Program.cs:19");
-            Console.WriteLine("4. Load journal from file - Program.cs:20");
-            Console.WriteLine("5. Quit - Program.cs:21");
-            Console.Write("Choose an option: - Program.cs:22");
+            Console.WriteLine("Journal Program ");
+            Console.WriteLine("1. Write a new entry ");
+            Console.WriteLine("2. Display journal ");
+            Console.WriteLine("3. Save journal to file ");
+            Console.WriteLine("4. Load journal from file ");
+            Console.WriteLine("5. Quit ");
+            Console.Write("Choose an option: ");
 
             string choice = Console.ReadLine();
             Console.WriteLine();
@@ -29,15 +29,15 @@ class Program
                 case "1": journal.AddEntry(); break;
                 case "2": journal.DisplayEntries(); break;
                 case "3":
-                    Console.Write("Enter filename: - Program.cs:32");
+                    Console.Write("Enter filename: ");
                     journal.SaveToFile(Console.ReadLine());
                     break;
                 case "4":
-                    Console.Write("Enter filename: - Program.cs:36");
+                    Console.Write("Enter filename: ");
                     journal.LoadFromFile(Console.ReadLine());
                     break;
                 case "5": return;
-                default: Console.WriteLine("Invalid option.\n - Program.cs:40"); break;
+                default: Console.WriteLine("Invalid option.\n "); break;
             }
         }
     }

@@ -6,7 +6,7 @@ namespace ScriptureMemorizer
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World! This is the ScriptureMemorizer Project. - Program.cs:9");
+            Console.WriteLine("Hello World! This is the ScriptureMemorizer Project.");
 
             // Create a reference
             Reference reference = new Reference("Alma", 36, 3);
@@ -29,12 +29,12 @@ namespace ScriptureMemorizer
 
                 if (scriptureFullyHidden)
                 {
-                    Console.WriteLine("\nAll words are hidden! Program ending... - Program.cs:32");
+                    Console.WriteLine("\nAll words are hidden! Program ending... ");
                     Console.ReadLine(); // wait for ONE final Enter
                     break;
                 }
 
-                Console.Write("\nPress Enter to continue or type 'quit' to exit: - Program.cs:37");
+                Console.Write("\nPress Enter to continue or type 'quit' to exit: ");
                 string input = Console.ReadLine();
 
                 if (input?.ToLower() == "quit")

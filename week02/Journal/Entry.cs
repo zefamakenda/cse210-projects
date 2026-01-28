@@ -8,7 +8,7 @@ public class Entry
 
     public void Display()
     {
-        Console.WriteLine($"{Date}  {Prompt} - Entry.cs:11");
+        Console.WriteLine($"{Date}  {Prompt} ");
         Console.WriteLine(Response);
         Console.WriteLine();
     }

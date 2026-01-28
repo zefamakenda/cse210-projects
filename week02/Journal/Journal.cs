@@ -18,8 +18,8 @@ public class Journal
     public void AddEntry()
     {
         string prompt = prompts[random.Next(prompts.Count)];
-        Console.WriteLine($"Prompt: {prompt} - Journal.cs:21");
-        Console.Write("Your response: - Journal.cs:22");
+        Console.WriteLine($"Prompt: {prompt} ");
+        Console.Write("Your response: ");
         string response = Console.ReadLine();
 
         entries.Add(new Entry
@@ -29,14 +29,14 @@ public class Journal
             Date = DateTime.Now.ToShortDateString()
         });
 
-        Console.WriteLine("Entry added!\n - Journal.cs:32");
+        Console.WriteLine("Entry added!\n ");
     }
 
     public void DisplayEntries()
     {
         if (entries.Count == 0)
         {
-            Console.WriteLine("No entries found.\n - Journal.cs:39");
+            Console.WriteLine("No entries found.\n ");
             return;
         }
 
@@ -53,14 +53,14 @@ public class Journal
         {
             writer.WriteLine($"{entry.Date}|{entry.Prompt}|{entry.Response}");
         }
-        Console.WriteLine("Journal saved.\n - Journal.cs:56");
+        Console.WriteLine("Journal saved.\n ");
     }
 
     public void LoadFromFile(string filename)
     {
         if (!File.Exists(filename))
         {
-            Console.WriteLine("File not found.\n - Journal.cs:63");
+            Console.WriteLine("File not found.\n ");
             return;
         }
 
@@ -79,6 +79,6 @@ public class Journal
             }
         }
 
-        Console.WriteLine("Journal loaded.\n - Journal.cs:82");
+        Console.WriteLine("Journal loaded.\n ");
     }
 }

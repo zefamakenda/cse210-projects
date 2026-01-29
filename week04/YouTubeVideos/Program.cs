@@ -5,7 +5,7 @@ class Program
     
     static void Main(string[] args) 
     {
-        Console.WriteLine("Hello World! This is the YouTubeVideos Project. - Program.cs:8");
+        Console.WriteLine("Hello World! This is the YouTubeVideos Project.");
         Console.WriteLine(); 
 
 
@@ -37,17 +37,17 @@ class Program
 
         {
             
-            Console.WriteLine($"Title: {video.GetTitle()} - Program.cs:40"); 
-            Console.WriteLine($"Author: {video.GetAuthor()} - Program.cs:41"); 
-            Console.WriteLine($"Length: {video.GetLength()} seconds - Program.cs:42"); 
-            Console.WriteLine($"Number of Comments: {video.GetNumberOfComments()} - Program.cs:43"); 
+            Console.WriteLine($"Title: {video.GetTitle()} "); 
+            Console.WriteLine($"Author: {video.GetAuthor()} "); 
+            Console.WriteLine($"Length: {video.GetLength()} seconds "); 
+            Console.WriteLine($"Number of Comments: {video.GetNumberOfComments()} "); 
             Console.WriteLine("Comments: - Program.cs:44");
             
 
             foreach (Comment comment in video.GetComments())
             
             {
-                Console.WriteLine($"{comment.GetName()}: {comment.GetText()} - Program.cs:50");
+                Console.WriteLine($"{comment.GetName()}: {comment.GetText()} ");
             }
 
 

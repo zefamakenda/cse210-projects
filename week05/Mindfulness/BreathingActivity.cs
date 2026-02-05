@@ -19,10 +19,10 @@ public class BreathingActivity : Activity
 
         while (elapsed < _duration)
         {
-            Console.Write("\nBreathe in... - BreathingActivity.cs:22");
-            ShowCountDown(4);
+            Console.Write("\nBreathe in... ");
+            ShowCountDown(6);
 
-            Console.Write("\nBreathe out... - BreathingActivity.cs:25");
+            Console.Write("\nBreathe out... ");
             ShowCountDown(6);
 
             elapsed += 10;

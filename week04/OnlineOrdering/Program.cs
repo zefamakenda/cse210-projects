@@ -8,7 +8,7 @@ class Program
 
     {
         // ----- Greeting -----
-        Console.WriteLine("Hello World! This is the OnlineOrdering Project. - Program.cs:11");
+        Console.WriteLine("Hello World! This is the OnlineOrdering Project.");
         Console.WriteLine(); 
 
 
@@ -31,7 +31,7 @@ class Program
 
         Console.WriteLine(order1.GetPackingLabel());
         Console.WriteLine(order1.GetShippingLabel());
-        Console.WriteLine($"Total Price: ${order1.GetTotalPrice():F2} - Program.cs:34");
+        Console.WriteLine($"Total Price: ${order1.GetTotalPrice():F2} ");
         Console.WriteLine();
 
 
@@ -53,7 +53,7 @@ class Program
 
         Console.WriteLine(order2.GetPackingLabel());
         Console.WriteLine(order2.GetShippingLabel());
-        Console.WriteLine($"Total Price: ${order2.GetTotalPrice():F2} - Program.cs:56");
+        Console.WriteLine($"Total Price: ${order2.GetTotalPrice():F2} ");
 
     }
 

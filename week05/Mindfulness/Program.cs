@@ -1,51 +1,60 @@
-using System;
+using System; 
 
 class Program
 {
-    static void Main()
+    
+    static void Main() 
     {
-        bool running = true;
+        bool running = true; 
 
-        while (running)
+        while (running) 
         {
-            string line1 = "Hello World! This is the Mindfulness Project.";
-            string line2 = "Mindfulness Program";
-            string line3 = "1. Breathing Activity";
-            string line4 = "2. Reflecting Activity";
+            string line1 = "Hello World! This is the Mindfulness Project."; 
+            string line2 = "Mindfulness Program";  
+            string line3 = "1. Breathing Activity"; 
+            string line4 = "2. Reflecting Activity"; 
             string line5 = "3. Listing Activity";
-            string line6 = "4. Quit";
+            string line6 = "4. Quit"; 
             string line7 = "\nSelect a choice from the menu: ";
-            Console.Clear();
+            Console.Clear(); 
+            
 
-            Console.WriteLine(line1);
-            Console.WriteLine();
+            Console.WriteLine(line1); 
+            Console.WriteLine(); 
             Console.WriteLine(line2);
             Console.WriteLine(line3);
-            Console.WriteLine(line4);
-            Console.WriteLine(line5);
+            Console.WriteLine(line4);  
+            Console.WriteLine(line5); 
             Console.WriteLine(line6);
-            Console.Write(line7);
+            Console.Write(line7); 
+            
 
-            string choice = Console.ReadLine();
+            string choice = Console.ReadLine(); 
 
-            switch (choice)
+            switch (choice) 
+            
             {
                 case "1":
                     new BreathingActivity().Run();
                     break;
+                    
                 case "2":
                     new ReflectingActivity().Run();
                     break;
+                    
                 case "3":
                     new ListingActivity().Run();
                     break;
+                    
                 case "4":
                     running = false;
-                    break;
+                    break; 
+                    
                 default:
-                    Console.WriteLine("Invalid choice. - Program.cs:46");
+                    Console.WriteLine("Invalid choice. - Program.cs:54");
                     Console.ReadLine();
                     break;
+                    
             }
         }
     }

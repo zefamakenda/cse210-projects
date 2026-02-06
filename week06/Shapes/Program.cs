@@ -7,7 +7,7 @@ class Program
     static void Main(string[] args) 
     {
         
-        Console.WriteLine("Hello World! This is the Shapes Project. - Program.cs:10");
+        Console.WriteLine("Hello World! This is the Shapes Project. ");
         List<Shape> shapes = new List<Shape>(); 
         
 
@@ -22,7 +22,7 @@ class Program
 
         {
 
-            Console.WriteLine($"Color: {shape.GetColor()}, Area: {shape.GetArea()} - Program.cs:25");
+            Console.WriteLine($"Color: {shape.GetColor()}, Area: {shape.GetArea()} ");
         } 
         
     } 

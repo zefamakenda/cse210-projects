@@ -51,7 +51,7 @@ class Program
                     break; 
                     
                 default:
-                    Console.WriteLine("Invalid choice. - Program.cs:54");
+                    Console.WriteLine("Invalid choice.");
                     Console.ReadLine();
                     break;
                     

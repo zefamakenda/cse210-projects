@@ -33,16 +33,16 @@ public class ListingActivity : Activity
         
         DisplayStartingMessage(); 
 
-        Console.WriteLine("\nList as many responses as you can to the following prompt: - ListingActivity.cs:36");
-        Console.WriteLine($"\n {GetRandomPrompt()} - ListingActivity.cs:37");
+        Console.WriteLine("\nList as many responses as you can to the following prompt: ");
+        Console.WriteLine($"\n {GetRandomPrompt()} ");
 
-        Console.WriteLine("\nYou may begin in: - ListingActivity.cs:39");
-        ShowCountDown(5);
+        Console.WriteLine("\nYou may begin in: ");
+        ShowCountDown(6);
 
         List<string> items = GetListFromUser();
         _count = items.Count;
 
-        Console.WriteLine($"\nYou listed {_count} items! - ListingActivity.cs:45");
+        Console.WriteLine($"\nYou listed {_count} items! ");
         DisplayEndingMessage();
         
     }
@@ -61,7 +61,7 @@ public class ListingActivity : Activity
         while (DateTime.Now < endTime)
         {
 
-            Console.Write("> - ListingActivity.cs:64");
+            Console.Write("> ");
             items.Add(Console.ReadLine());
         }
 

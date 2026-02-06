@@ -53,9 +53,9 @@ public class ReflectingActivity : Activity
     private void DisplayPrompt()
     {
         
-        Console.WriteLine("\nConsider the following prompt: - ReflectionActivity.cs:56");
-        Console.WriteLine($"\n {GetRandomPrompt()} - ReflectionActivity.cs:57");
-        Console.WriteLine("\nPress Enter when you are ready. - ReflectionActivity.cs:58");
+        Console.WriteLine("\nConsider the following prompt: ");
+        Console.WriteLine($"\n {GetRandomPrompt()} ");
+        Console.WriteLine("\nPress Enter when you are ready. ");
         Console.ReadLine();
     }
 
@@ -66,7 +66,7 @@ public class ReflectingActivity : Activity
         while (DateTime.Now < endTime)
 
         {
-            Console.Write($"\n{GetRandomQuestion()} - ReflectionActivity.cs:69");
+            Console.Write($"\n{GetRandomQuestion()} ");
             ShowSpinner(5);
         }
         

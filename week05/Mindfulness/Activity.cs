@@ -23,12 +23,12 @@ public class Activity
     {
         
         Console.Clear(); 
-        Console.WriteLine($"Welcome to the {_name} Activity.\n - Activity.cs:26"); 
+        Console.WriteLine($"Welcome to the {_name} Activity.\n "); 
         Console.WriteLine(_description);
-        Console.Write("\nHow long, in seconds, would you like for your session? - Activity.cs:28");  
+        Console.Write("\nHow long, in seconds, would you like for your session? ");  
         _duration = int.Parse(Console.ReadLine());  
 
-        Console.WriteLine("\nGet ready... - Activity.cs:31");
+        Console.WriteLine("\nGet ready... ");
         ShowSpinner(5);  
         
     }
@@ -36,9 +36,9 @@ public class Activity
     public void DisplayEndingMessage()
     {
         
-        Console.WriteLine("\nWell done! - Activity.cs:39"); 
+        Console.WriteLine("\nWell done! "); 
         ShowSpinner(2);  
-        Console.WriteLine($"\nYou have completed {_duration} seconds of the {_name} Activity. - Activity.cs:41");
+        Console.WriteLine($"\nYou have completed {_duration} seconds of the {_name} Activity. ");
         ShowSpinner(3); 
         
     }

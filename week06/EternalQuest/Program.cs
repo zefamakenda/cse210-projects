@@ -8,7 +8,7 @@ class Program
     static void Main(string[] args) 
     
     {
-        Console.WriteLine("Hello World! This is the EternalQuest Project. - Program.cs:11"); 
+        Console.WriteLine("Hello World! This is the EternalQuest Project."); 
         List<Goal> goals = new List<Goal>(); 
         int score = 0;
         bool running = true;
@@ -18,17 +18,17 @@ class Program
 
         {
 
-            Console.WriteLine("\nEternal Quest Menu - Program.cs:21");
-            Console.WriteLine("1. Create New Goal - Program.cs:22");
-            Console.WriteLine("2. List Goals - Program.cs:23");
-            Console.WriteLine("3. Record Event - Program.cs:24");
-            Console.WriteLine("4. Show Score - Program.cs:25");
-            Console.WriteLine("5. Save Goals - Program.cs:26");
-            Console.WriteLine("6. Load Goals - Program.cs:27");
-            Console.WriteLine("7. Quit - Program.cs:28");
+            Console.WriteLine("\nEternal Quest Menu ");
+            Console.WriteLine("1. Create New Goal ");
+            Console.WriteLine("2. List Goals ");
+            Console.WriteLine("3. Record Event ");
+            Console.WriteLine("4. Show Score ");
+            Console.WriteLine("5. Save Goals ");
+            Console.WriteLine("6. Load Goals ");
+            Console.WriteLine("7. Quit ");
 
 
-            Console.Write("Select an option: - Program.cs:31");
+            Console.Write("Select an option: ");
 
             string choice = Console.ReadLine();
 
@@ -51,7 +51,7 @@ class Program
 
 
                 case "4":
-                    Console.WriteLine($"Your score is: {score} - Program.cs:54");
+                    Console.WriteLine($"Your score is: {score} ");
                     break;
 
                 case "5":
@@ -82,24 +82,24 @@ class Program
 
     {
         
-        Console.WriteLine("\nThe types of Goals are: - Program.cs:85");  
-        Console.WriteLine("1. Simple Goal - Program.cs:86"); 
-        Console.WriteLine("2. Eternal Goal - Program.cs:87");
-        Console.WriteLine("3. Checklist Goal - Program.cs:88"); 
+        Console.WriteLine("\nThe types of Goals are: ");  
+        Console.WriteLine("1. Simple Goal "); 
+        Console.WriteLine("2. Eternal Goal ");
+        Console.WriteLine("3. Checklist Goal "); 
         
 
-        Console.Write("Which type of goal would you like to create? - Program.cs:91");
+        Console.Write("Which type of goal would you like to create? ");
         string type = Console.ReadLine();
         
 
-        Console.Write("Name: - Program.cs:95");
+        Console.Write("Name: ");
         string name = Console.ReadLine(); 
 
-        Console.Write("Description: - Program.cs:98");
+        Console.Write("Description: ");
         string description = Console.ReadLine(); 
         
 
-        Console.Write("Points: - Program.cs:102");
+        Console.Write("Points: ");
         int points = int.Parse(Console.ReadLine());
 
 
@@ -117,11 +117,11 @@ class Program
         else if (type == "3")
 
         {
-            Console.Write("Target count: - Program.cs:120");
+            Console.Write("Target count: ");
             int target = int.Parse(Console.ReadLine());
 
 
-            Console.Write("Bonus points: - Program.cs:124");
+            Console.Write("Bonus points: ");
             int bonus = int.Parse(Console.ReadLine());
 
 
@@ -139,7 +139,7 @@ class Program
 
         {
             
-            Console.WriteLine($"{i + 1}. {goals[i].GetDetailsString()} - Program.cs:142"); 
+            Console.WriteLine($"{i + 1}. {goals[i].GetDetailsString()} "); 
         }
     } 
 
@@ -148,13 +148,13 @@ class Program
         
         ListGoals(goals); 
 
-        Console.Write("Which goal did you accomplish? - Program.cs:151");
+        Console.Write("Which goal did you accomplish? ");
         int index = int.Parse(Console.ReadLine()) - 1;
         
         
 
         int earned = goals[index].RecordEvent();
-        Console.WriteLine($"You earned {earned} points! - Program.cs:157");
+        Console.WriteLine($"You earned {earned} points! ");
 
 
         return earned;
@@ -165,7 +165,7 @@ class Program
 
     { 
         
-        Console.Write("Enter filename: - Program.cs:168");
+        Console.Write("Enter filename: ");
         string filename = Console.ReadLine();
 
 
@@ -186,7 +186,7 @@ class Program
     static void LoadGoals(List<Goal> goals, out int score) 
     
     {
-        Console.Write("Enter filename: - Program.cs:189"); 
+        Console.Write("Enter filename: "); 
 
         string filename = Console.ReadLine();
 
